@@ -1,0 +1,14 @@
+.CardBox{
+    width: 13vw;
+    height: 450px;
+    padding: 10px;
+}
+
+.OverflowText {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block; /* Відображає елемент як блок */
+}
+
+

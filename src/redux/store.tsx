@@ -1,11 +1,13 @@
 import {configureStore} from "@reduxjs/toolkit";
 import {movieReducer} from "./slices/moviesSlice";
 import {useDispatch, useSelector} from "react-redux";
+import {genreActions, genreReducer} from "./slices/genresSlice";
 
 
 export const store = configureStore({
     reducer:{
-        movieSlice: movieReducer
+        moviesSlice: movieReducer,
+        genresSlice: genreReducer
     }
 })
 

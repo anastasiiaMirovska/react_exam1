@@ -1,22 +1,22 @@
 import axios, {AxiosError} from "axios";
-import {BaseURL, ImageURL, urls} from "../constants/urls";
+import {BaseURL, urls} from "../constants/urls";
 import {IMovie} from "../Interfaces/IMovie";
+import {IGenre} from "../Interfaces/IGenre";
 
-const APIKey = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkN2ZhOGE0YzJkMTc5N2E0Mjg4MzFlZTc5NzZmOTQ0OCIsInN1YiI6IjY2NzU4NTg2MDIyNmVlZGFhNzcxZWQ0NyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.lRJaOsj6btPEU7AnzdVClCt8MryzHxSpq2rggbr8OR0"
+const BearerToken = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkN2ZhOGE0YzJkMTc5N2E0Mjg4MzFlZTc5NzZmOTQ0OCIsInN1YiI6IjY2NzU4NTg2MDIyNmVlZGFhNzcxZWQ0NyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.lRJaOsj6btPEU7AnzdVClCt8MryzHxSpq2rggbr8OR0"
 
 const axiosInstance = axios.create({baseURL:BaseURL});
 
-const imageAxiosInstance = axios.create({baseURL:ImageURL});
 
 axiosInstance.interceptors.request.use(req=>{
-    req.headers.Authorization = "Bearer " + APIKey;
+    req.headers.Authorization = "Bearer " + BearerToken;
     return req
 })
 
 
 const movieService = {
-    async getMovies():Promise<IMovie[]>{
-        const response = await axiosInstance.get(urls.movies.discover);
+    async getMovies(page:number):Promise<IMovie[]>{
+        const response = await axiosInstance.get(urls.movies.discover, {params:{page:page}});
         return response.data.results;
     },
 
@@ -39,10 +39,17 @@ const imageService = {
     }
 }
 
+const genreService = {
+    async getGenres():Promise<IGenre[]>{
+        const genres = await axiosInstance.get(urls.genres.genresList);
+        return genres.data.genres
+    }
+}
 
 export{
     axiosInstance,
     movieService,
-    imageService
+    imageService,
+    genreService
 }
 

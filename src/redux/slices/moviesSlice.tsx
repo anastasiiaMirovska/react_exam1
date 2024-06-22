@@ -1,23 +1,27 @@
-import {createAsyncThunk, createSlice, isFulfilled, isRejected} from "@reduxjs/toolkit";
+import {createAsyncThunk, createSlice, isFulfilled, isRejected, PayloadAction} from "@reduxjs/toolkit";
 import {IMovie} from "../../Interfaces/IMovie";
 import {movieService} from "../../services/api.service";
 import {AxiosError} from "axios";
 
 type MoviesSliceType = {
     movies: IMovie[],
+    page: number,
+    total_pages: number
     error: boolean
 }
 
 const initialMoviesState: MoviesSliceType = {
     movies: [],
+    page: null,
+    total_pages: null,
     error: null
 }
 
 const loadMovies = createAsyncThunk(
     "movieSlice/loadMovies",
-    async (_, thunkAPI)=>{
+    async (page:number, thunkAPI)=>{
         try{
-            const movies = await movieService.getMovies();
+            const movies = await movieService.getMovies(page);
             return thunkAPI.fulfillWithValue(movies)
         }
         catch(e){
@@ -27,10 +31,15 @@ const loadMovies = createAsyncThunk(
     }
 )
 
+
 const moviesSlice = createSlice({
     name:"movieSlice",
     initialState: initialMoviesState,
-    reducers:{},
+    reducers:{
+        changePage:(state, action: PayloadAction<number>)=>{
+            state.page = action.payload
+        }
+    },
     extraReducers: builder=>
         builder
             .addCase(loadMovies.fulfilled, (state, action)=>{
@@ -45,10 +54,14 @@ const moviesSlice = createSlice({
 
 })
 
-export const {reducer: movieReducer, actions} = moviesSlice;
+const {reducer: movieReducer, actions} = moviesSlice;
 
-export const movieActions = {
+const movieActions = {
     ...moviesSlice.actions,
     loadMovies
 }
 
+export {
+    movieActions,
+    movieReducer
+}

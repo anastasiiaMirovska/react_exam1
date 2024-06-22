@@ -1,5 +1,4 @@
 const BaseURL = "https://api.themoviedb.org/3";
-const ImageURL = "https://image.tmdb.org/t/p/original/"
 
 
 const urls = {
@@ -8,11 +7,13 @@ const urls = {
     },
     images:{
         configuration: "/configuration"
+    },
+    genres:{
+        genresList: "/genre/movie/list"
     }
 }
 
 export{
     BaseURL,
-    ImageURL,
     urls
 }
