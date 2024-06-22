@@ -1,6 +1,6 @@
 import React from 'react';
 
-const MoviesListComponent = () => {
+const HomePage = () => {
     return (
         <div>
             
@@ -8,4 +8,4 @@ const MoviesListComponent = () => {
     );
 };
 
-export default MoviesListComponent;
+export default HomePage;

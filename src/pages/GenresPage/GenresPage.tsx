@@ -1,11 +1,11 @@
 import React from 'react';
 
-const MainLayout = () => {
+const GenresPage = () => {
     return (
         <div>
-
+            
         </div>
     );
 };
 
-export default MainLayout;
+export default GenresPage;
