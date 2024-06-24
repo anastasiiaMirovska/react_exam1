@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="33f085b3-1e6b-484e-ad09-1405a09c1eff" name="Changes" comment="try" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="tsconfig.json" />
+        <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RESET_MODE" value="HARD" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;anastasiiaMirovska&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="6ee583a5-7d9f-4c4c-9355-233c5c138597" />
+        <option name="url" value="https://github.com/anastasiiaMirovska/react_exam.git" />
+      </UrlAndAccount>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2iDnH8VOCXu8x9VHWysKWdgOvwc" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "c6b67ba6",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "D:/Okten/React/react_exam/src/pages",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_interpreter_path": "node",
+    "nodejs_package_manager_path": "npm",
+    "npm.npm start.executor": "Run",
+    "settings.editor.selected.configurable": "preferences.updates",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\IntelliJ IDEA 2023.3.2\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Okten\React\react_exam\src\pages" />
+      <recent name="D:\Okten\React\react_exam\src\layouts" />
+      <recent name="D:\Okten\React\react_exam\src\router" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Okten\React\react_exam\src\components\elements" />
+      <recent name="D:\Okten\React\react_exam\src\components\movies" />
+      <recent name="D:\Okten\React\react_exam\src\components\genres" />
+      <recent name="D:\Okten\React\react_exam\src\pages\MoviesPage" />
+      <recent name="D:\Okten\React\react_exam\src\types" />
+    </key>
+  </component>
+  <component name="RunManager" selected="npm.npm start">
+    <configuration name="Debug Application" type="JavascriptDebugType" uri="http://localhost:3000">
+      <method v="2" />
+    </configuration>
+    <configuration name="npm start" type="js.build_tools.npm">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="start" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="33f085b3-1e6b-484e-ad09-1405a09c1eff" name="Changes" comment="" />
+      <created>1719033928266</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1719033928266</updated>
+      <workItem from="1719033929308" duration="965000" />
+      <workItem from="1719034938571" duration="137000" />
+      <workItem from="1719035149540" duration="590000" />
+      <workItem from="1719035758988" duration="75000" />
+      <workItem from="1719036024646" duration="39367000" />
+      <workItem from="1719124737805" duration="68333000" />
+      <workItem from="1719242442206" duration="808000" />
+    </task>
+    <task id="LOCAL-00001" summary="init master">
+      <option name="closed" value="true" />
+      <created>1719034461179</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1719034461179</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Created base for the future project: components, pages, router...">
+      <option name="closed" value="true" />
+      <created>1719045230179</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1719045230179</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Movies page, movies cards, poster preview components">
+      <option name="closed" value="true" />
+      <created>1719078238308</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1719078238308</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Problems with pagination">
+      <option name="closed" value="true" />
+      <created>1719097355487</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1719097355487</updated>
+    </task>
+    <task id="LOCAL-00005" summary="SearchComponent, MovieInfoPage with component">
+      <option name="closed" value="true" />
+      <created>1719216439426</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1719216439426</updated>
+    </task>
+    <task id="LOCAL-00006" summary="StarRating, ButtonBack">
+      <option name="closed" value="true" />
+      <created>1719221144925</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1719221144925</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Badges">
+      <option name="closed" value="true" />
+      <created>1719227448930</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1719227448930</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Some styles, switcher">
+      <option name="closed" value="true" />
+      <created>1719235876995</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1719235876995</updated>
+    </task>
+    <task id="LOCAL-00009" summary="User">
+      <option name="closed" value="true" />
+      <created>1719240525400</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1719240525400</updated>
+    </task>
+    <task id="LOCAL-00010" summary="MovieInfo">
+      <option name="closed" value="true" />
+      <created>1719241121467</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1719241121467</updated>
+    </task>
+    <task id="LOCAL-00011" summary="MovieInfo">
+      <option name="closed" value="true" />
+      <created>1719241167159</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1719241167159</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="init master" />
+    <MESSAGE value="Created base for the future project: components, pages, router..." />
+    <MESSAGE value="Movies page, movies cards, poster preview components" />
+    <MESSAGE value="Problems with pagination" />
+    <MESSAGE value="SearchComponent, MovieInfoPage with component" />
+    <MESSAGE value="StarRating, ButtonBack" />
+    <MESSAGE value="Badges" />
+    <MESSAGE value="Some styles, switcher" />
+    <MESSAGE value="User" />
+    <MESSAGE value="MovieInfo" />
+    <MESSAGE value="try" />
+    <option name="LAST_COMMIT_MESSAGE" value="try" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/components/movies/MoviesListCardComponent/MoviesListCardComponent.tsx</url>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/Interfaces/IMovieDetails.tsx</url>
+          <line>29</line>
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+  </component>
+</project>
