@@ -1,0 +1,19 @@
+.linkBox{
+    width: 100%;
+    display: flex;
+    justify-content: left;
+}
+
+.navLink {
+    text-decoration: none;
+    color: rgba(40, 44, 52, 0.8);
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.navLinkActive {
+    text-decoration: none;
+    color: rgba(150, 194, 0, 0.8);
+    font-size: 18px;
+    font-weight: 500;
+}

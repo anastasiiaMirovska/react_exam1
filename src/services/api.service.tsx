@@ -1,7 +1,10 @@
-import axios, {AxiosError} from "axios";
+import axios, {AxiosError, AxiosResponse} from "axios";
 import {BaseURL, urls} from "../constants/urls";
 import {IMovie} from "../Interfaces/IMovie";
 import {IGenre} from "../Interfaces/IGenre";
+import {IMovieResponse} from "../Interfaces/IMovieResponse";
+import {IGetMovies} from "../Interfaces/IGetMovies";
+import {IMovieDetails} from "../Interfaces/IMovieDetails";
 
 const BearerToken = "eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJkN2ZhOGE0YzJkMTc5N2E0Mjg4MzFlZTc5NzZmOTQ0OCIsInN1YiI6IjY2NzU4NTg2MDIyNmVlZGFhNzcxZWQ0NyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.lRJaOsj6btPEU7AnzdVClCt8MryzHxSpq2rggbr8OR0"
 
@@ -13,12 +16,28 @@ axiosInstance.interceptors.request.use(req=>{
     return req
 })
 
-
 const movieService = {
-    async getMovies(page:number):Promise<IMovie[]>{
-        const response = await axiosInstance.get(urls.movies.discover, {params:{page:page}});
-        return response.data.results;
+    async getMovies({page, with_genres, filmName}:IGetMovies):Promise<IMovieResponse>{
+        let response;
+        if(with_genres){
+            response = await axiosInstance.get<IMovieResponse>(urls.movies.discover, {params:{page:page, with_genres: with_genres}});
+        }
+        else if(filmName){
+            response = await axiosInstance.get<IMovieResponse>(urls.movies.search, {params:{page:page, query: filmName}});
+        }
+        else{
+            response = await axiosInstance.get<IMovieResponse>(urls.movies.discover, {params:{page:page}});
+        }
+        return response.data;
     },
+
+
+    async getMovieById (id:string):Promise<IMovieDetails>{
+        const response = await axiosInstance.get(urls.movies.movieById(id));
+        console.log(id);
+        console.log(response.data)
+        return response.data
+    }
 
 }
 

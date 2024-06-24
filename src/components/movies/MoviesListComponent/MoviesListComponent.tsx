@@ -1,8 +1,8 @@
 import React from 'react';
-import {useAppSelector} from "../../hooks/reduxHooks";
+import {useAppSelector} from "../../../hooks/reduxHooks";
 import MoviesListCardComponent from "../MoviesListCardComponent/MoviesListCardComponent";
 
-import styles from "./MoviesListCardComponent.module.css"
+import styles from "./MoviesListComponent.module.css"
 
 
 const MoviesListComponent = () => {

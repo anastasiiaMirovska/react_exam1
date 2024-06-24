@@ -4,35 +4,68 @@ import {useSearchParams} from "react-router-dom";
 import {movieActions} from "../../redux/slices/moviesSlice";
 import {movieService} from "../../services/api.service";
 import {stringify} from "node:querystring";
+import styles from "./PaginationComponent.module.css"
+import {Button, ButtonProps, Stack, styled} from "@mui/material";
+import {purple} from "@mui/material/colors";
+import {genreActions} from "../../redux/slices/genresSlice";
 
 const PaginationComponent = () => {
+    const [query, setQuery ] =useSearchParams({page: "1", with_genres:null})
 
-    const {page, total_pages} = useAppSelector(state => state.moviesSlice);
+    const {page, total_pages, with_genres} = useAppSelector(state => state.moviesSlice);
     const dispatch = useAppDispatch();
 
-    const changePage = (action:string)=>{
-        let myPage = page;
+    const changePage = (action:string) => {
+        let newPage = page;
         switch(action){
-            case "previous":
-                if(myPage>1){
-                    dispatch(movieActions.changePage(myPage-1));
+            case "prev":
+                if (newPage > 1) {
+                    newPage = newPage - 1;
                 }
-                break
+                break;
             case "next":
-                if(myPage<total_pages){
-                    dispatch(movieActions.changePage(myPage+1));
+                if (newPage < total_pages) {
+                    newPage = newPage + 1;
                 }
                 break;
         }
+        if (newPage !== page) {
+            const currentGenre = parseInt(query.get("with_genres"))||0;
+            const currentFilmName = query.get("filmName")||"";
+            if(currentGenre === 0 && currentFilmName ===""){
+                setQuery( {page: newPage.toString()});
+            }
+            else if(currentGenre !== 0 && currentGenre !== null){
+                setQuery({page:newPage.toString(), with_genres:currentGenre.toString()})
+            }
+            else if(currentFilmName!=="" && currentFilmName !== null){
+                setQuery( {page: newPage.toString(),filmName: currentFilmName});
+            }
+            else{
+                setQuery( {page: newPage.toString(), with_genres: currentGenre.toString(), filmName: currentFilmName });
+            }
+            dispatch(movieActions.changePage(newPage));
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    };
 
-    }
+    const ColorButton = styled(Button)<ButtonProps>(({ theme }) => ({
+        color: theme.palette.getContrastText(purple[500]),
+        backgroundColor: purple[500],
+        '&:hover': {
+            backgroundColor: purple[700],
+        },
+    }));
 
+// Стрілочки вправо вліво
     return (
         <div>
-            // Стрілочки вправо вліво
-            <button onClick={()=>changePage("previous")}>Previous</button>
-            <span>{page}</span>
-            <button onClick={()=>changePage("next")}>Next</button>
+            <Stack direction="row" spacing={2}>
+                <ColorButton onClick={()=>changePage("prev")} disabled={page<=1}  variant="contained" size="medium">Previous</ColorButton>
+                <span>{page}</span>
+                <ColorButton onClick={()=>changePage("next")} disabled={page>=total_pages} variant="contained" size="medium" >Next</ColorButton>
+            </Stack>
+
         </div>
     );
 };

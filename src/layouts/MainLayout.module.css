@@ -1,0 +1,8 @@
+.MainLayout{
+    display: flex;
+    justify-content: center;
+}
+
+.mainContainer {
+    width: 85vw;
+}
