@@ -79,7 +79,7 @@ const MoviesPage = () => {
         <div className={styles.MoviesPage}>
             <SearchComponent/>
             <GenresListComponent/>
-            {/*<MoviesNavigationComponent/>*/}
+            <MoviesNavigationComponent/>
             <MoviesListComponent/>
             <PaginationComponent/>
         </div>
