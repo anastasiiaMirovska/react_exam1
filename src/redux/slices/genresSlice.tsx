@@ -38,7 +38,6 @@ const genresSlice = createSlice({
     extraReducers: builder =>
         builder
             .addCase(loadGenres.fulfilled, (state, action)=>{
-                console.log(action.payload)
                 state.genres = action.payload
             })
             .addMatcher(isFulfilled(loadGenres), (state, action)=>{

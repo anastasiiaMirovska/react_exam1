@@ -1,6 +1,7 @@
 .FormBlock{
     display: flex;
     justify-content: space-around;
+    align-items: center;
     align-content: center;
-    gap:10px
+    gap:10px;
 }

@@ -34,8 +34,6 @@ const movieService = {
 
     async getMovieById (id:string):Promise<IMovieDetails>{
         const response = await axiosInstance.get(urls.movies.movieById(id));
-        console.log(id);
-        console.log(response.data)
         return response.data
     }
 

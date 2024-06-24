@@ -36,44 +36,7 @@ const MoviesPage = () => {
         else{
             dispatch(movieActions.loadMovies({page:currentPage, with_genres:currentGenre, filmName: currentFilmName}))
         }
-
-        // const params = {
-        //     page: currentPage,
-        //     ...((currentGenre !== 0 || currentGenre !== null) && { with_genres: currentGenre }),
-        //     ...(currentFilmName && { filmName: currentFilmName }),
-        // };
-        //
-        // dispatch(movieActions.loadMovies(params));
-        console.log(with_genres, filmName);
     }, [query]);
-
-    // useEffect(() => {
-    //     const currentPage = parseInt(query.get("page")) || 1;
-    //     const currentGenre = parseInt(query.get("with_genres"))||0;
-    //     const currentFilmName = query.get("filmName")||"";
-    //
-    //     dispatch(movieActions.changePage(currentPage));
-    //
-    //     if(currentGenre !== 0){
-    //         dispatch(movieActions.loadMovies({page:currentPage, genreID:currentGenre}));
-    //         setQuery({ page: String(page), with_genres: String(with_genres)});
-    //     }
-    //     else if(currentFilmName !== ""){
-    //         dispatch(movieActions.loadMovies({page:currentPage, filmName:currentFilmName}));
-    //         setQuery({ page: String(page), filmName:currentFilmName});
-    //     }
-    //     else{
-    //         dispatch(movieActions.loadMovies({page:currentPage}));
-    //         dispatch(movieActions.changeGenre(null));
-    //         dispatch(movieActions.changeFilmName(null));
-    //         setQuery({ page: String(page)});
-    //     }
-    //
-    //     dispatch(genreActions.loadGenres());
-    //     console.log(with_genres);
-    //     console.log(filmName);
-    // }, [dispatch, query]);
-
 
     return (
         <div className={styles.MoviesPage}>

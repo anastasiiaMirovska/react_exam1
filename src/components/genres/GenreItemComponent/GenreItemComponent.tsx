@@ -3,6 +3,8 @@ import {IGenre} from "../../../Interfaces/IGenre";
 import {useSearchParams} from "react-router-dom";
 import {useAppDispatch} from "../../../hooks/reduxHooks";
 import {movieActions} from "../../../redux/slices/moviesSlice";
+import {ColorButton, LimeButton} from "../../../StyledElementsMUI/StyledElementsMUI";
+import {Button} from "@mui/material";
 
 interface IProps{
     genre:IGenre
@@ -25,7 +27,7 @@ const GenreItemComponent:FC<IProps> = ({genre}) => {
 
     return (
         <div>
-            <button onClick={()=>changeGenreId(genre.id)}>{genre.name}</button>
+            <LimeButton onClick={()=>changeGenreId(genre.id)} variant="outlined" size="small" sx={{margin:"4px"}}>{genre.name}</LimeButton>
         </div>
     );
 };

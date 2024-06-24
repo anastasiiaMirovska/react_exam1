@@ -8,7 +8,7 @@ const MovieInfoPage = () => {
     const dispatch = useAppDispatch();
     const {id} = useParams();
     const {movie, error} = useAppSelector(state=> state.moviesSlice);
-    console.log(id);
+
     useEffect(()=>{
         dispatch(movieActions.loadMovie(id));
     }, [id, dispatch]);

@@ -6,7 +6,7 @@ import {movieActions} from "../../redux/slices/moviesSlice";
 import {joiResolver} from "@hookform/resolvers/joi";
 import SearchValidator from "../../validators/SearchValidator";
 import {TextField} from "@mui/material";
-import {ColorButton} from "../../StyledElementsMUI/StyledElementsMUI";
+import {BootstrapInput, ColorButton, CssTextField} from "../../StyledElementsMUI/StyledElementsMUI";
 import styles from"./SearchComponent.module.css"
 
 interface IProps {
@@ -34,7 +34,8 @@ const SearchComponent = () => {
     return (
         <div>
             <form onSubmit={handleSubmit(searchFilms)} className={styles.FormBlock}>
-                <TextField id="outlined-basic" label="Search" variant="outlined" color={"info"} size={"small"} sx={mode && {backgroundColor:"white"}}{...register("filmName")}/>
+                <span>Search film</span>
+                <BootstrapInput id="outlined-basic" size={"small"} {...register("filmName")}/>
                 <ColorButton disabled={!isValid} variant="contained" size="medium" >Submit</ColorButton>
                 {
                     errors.filmName && <p>{errors.filmName.message}</p>
