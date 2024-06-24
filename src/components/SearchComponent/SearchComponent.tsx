@@ -5,6 +5,9 @@ import {useAppDispatch, useAppSelector} from "../../hooks/reduxHooks";
 import {movieActions} from "../../redux/slices/moviesSlice";
 import {joiResolver} from "@hookform/resolvers/joi";
 import SearchValidator from "../../validators/SearchValidator";
+import {TextField} from "@mui/material";
+import {ColorButton} from "../../StyledElementsMUI/StyledElementsMUI";
+import styles from"./SearchComponent.module.css"
 
 interface IProps {
     filmName: string;
@@ -13,6 +16,7 @@ interface IProps {
 const SearchComponent = () => {
     const [query, setQuery] = useSearchParams({ page: "1", filmName: "" });
     const {movies} = useAppSelector(state=>state.moviesSlice);
+    const {mode} = useAppSelector(state => state.switchSlice);
     const dispatch = useAppDispatch();
     const { handleSubmit, register,formState:{errors, isValid} } = useForm<IProps>({mode:"all", resolver: joiResolver(SearchValidator)});
 
@@ -29,9 +33,9 @@ const SearchComponent = () => {
 
     return (
         <div>
-            <form onSubmit={handleSubmit(searchFilms)}>
-                <input type="text" placeholder={"filmName"} {...register("filmName")} />
-                <button disabled={!isValid}>Submit</button>
+            <form onSubmit={handleSubmit(searchFilms)} className={styles.FormBlock}>
+                <TextField id="outlined-basic" label="Search" variant="outlined" color={"info"} size={"small"} sx={mode && {backgroundColor:"white"}}{...register("filmName")}/>
+                <ColorButton disabled={!isValid} variant="contained" size="medium" >Submit</ColorButton>
                 {
                     errors.filmName && <p>{errors.filmName.message}</p>
                 }

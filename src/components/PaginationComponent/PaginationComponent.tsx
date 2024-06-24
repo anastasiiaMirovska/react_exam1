@@ -8,6 +8,7 @@ import styles from "./PaginationComponent.module.css"
 import {Button, ButtonProps, Stack, styled} from "@mui/material";
 import {purple} from "@mui/material/colors";
 import {genreActions} from "../../redux/slices/genresSlice";
+import {ColorButton} from "../../StyledElementsMUI/StyledElementsMUI";
 
 const PaginationComponent = () => {
     const [query, setQuery ] =useSearchParams({page: "1", with_genres:null})
@@ -49,13 +50,6 @@ const PaginationComponent = () => {
         }
     };
 
-    const ColorButton = styled(Button)<ButtonProps>(({ theme }) => ({
-        color: theme.palette.getContrastText(purple[500]),
-        backgroundColor: purple[500],
-        '&:hover': {
-            backgroundColor: purple[700],
-        },
-    }));
 
 // Стрілочки вправо вліво
     return (

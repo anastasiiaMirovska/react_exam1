@@ -2,12 +2,14 @@ import {configureStore} from "@reduxjs/toolkit";
 import {movieReducer} from "./slices/moviesSlice";
 import {useDispatch, useSelector} from "react-redux";
 import {genreActions, genreReducer} from "./slices/genresSlice";
+import {switchReducer} from "./slices/switcherSlice";
 
 
 export const store = configureStore({
     reducer:{
         moviesSlice: movieReducer,
-        genresSlice: genreReducer
+        genresSlice: genreReducer,
+        switchSlice: switchReducer
     }
 })
 

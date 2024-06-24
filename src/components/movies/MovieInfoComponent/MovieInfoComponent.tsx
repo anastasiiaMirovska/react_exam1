@@ -15,7 +15,6 @@ interface IProps{
 
 const MovieInfoComponent:FC<IProps> = ({movie}) => {
     const rating = Math.round(movie.vote_average*10)/10;
-    console.log(movie.genres)
 
     return (
         <div>
@@ -38,9 +37,9 @@ const MovieInfoComponent:FC<IProps> = ({movie}) => {
                 <span>Overview: {movie.overview}</span><br/>
                 <span>Popularity: {movie.popularity}</span><br/>
                 <span>Release date: {movie.release_date}</span><br/>
-                {/*<span>Vote average: number,</span>*/}
                 <span>Vote count: {movie.vote_count}</span><br/>
-                <StarsRatingComponent rating={rating}/>
+                <StarsRatingComponent rating={rating} size={"large"}/>
+                <span>Rating: {rating}</span>
             </div>
 
         </div>

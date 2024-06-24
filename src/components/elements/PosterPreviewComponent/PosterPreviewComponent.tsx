@@ -9,7 +9,8 @@ interface IProps{
 
 
 const PosterPreviewComponent:FC<IProps> = ({poster_path, poster_size}) => {
-    const [imagePath, setImagePath] = useState<string>("")
+
+    const [imagePath, setImagePath] = useState<string>("");
 
     useEffect(() => {
         imageService.getImage(poster_size).then(myImagePath => {
