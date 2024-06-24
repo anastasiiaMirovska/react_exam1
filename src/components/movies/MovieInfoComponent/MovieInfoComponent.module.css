@@ -1,0 +1,13 @@
+.MovieInfoBox{
+    display:flex;
+}
+
+
+.GeneralInfo{
+    width:60vw;
+    margin-right: 25px;
+}
+
+.PosterBox{
+    width:25vw;
+}
