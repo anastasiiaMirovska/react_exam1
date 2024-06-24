@@ -17,7 +17,9 @@ const MovieInfoPage = () => {
     return (
         <div>
             {
-                movie && !error ? <MovieInfoComponent key={id} movie={movie}/> : <div>Ops Something went wrong</div>
+                error ? <div>Ops. Something went wrong</div>:
+
+                movie ? <MovieInfoComponent key={id} movie={movie}/> : <div>Loading</div>
             }
         </div>
     );

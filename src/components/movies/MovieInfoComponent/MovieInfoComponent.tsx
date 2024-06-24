@@ -2,19 +2,24 @@ import React, {FC} from 'react';
 import {useAppSelector} from "../../../hooks/reduxHooks";
 import {IMovie} from "../../../Interfaces/IMovie";
 import {IMovieDetails} from "../../../Interfaces/IMovieDetails";
-import PosterPreviewComponent from "../PosterPreviewComponent/PosterPreviewComponent";
+import PosterPreviewComponent from "../../elements/PosterPreviewComponent/PosterPreviewComponent";
+import {useNavigate} from "react-router-dom";
+import StarsRatingComponent from "../../elements/StarsRatingComponent/StarsRatingComponent";
+import ButtonBack from "../../elements/ButtonBack/ButtonBack";
 
 interface IProps{
     movie : IMovieDetails
 }
 
 const MovieInfoComponent:FC<IProps> = ({movie}) => {
+    const rating = Math.round(movie.vote_average*10)/10;
+
     return (
         <div>
 
+            <ButtonBack/>
             <h2>{movie.title}</h2>
             <PosterPreviewComponent poster_path={movie.poster_path} poster_size={2}/>
-
 
             <span>Age : {movie.adult ? <span>for adults</span> : <span>any</span>}</span><br/>
             {/*<span>genre_ids: number[],</span>*/}
@@ -26,6 +31,7 @@ const MovieInfoComponent:FC<IProps> = ({movie}) => {
             <span>Release date: {movie.release_date}</span><br/>
             {/*<span>Vote average: number,</span>*/}
             <span>Vote count: {movie.vote_count}</span><br/>
+            <StarsRatingComponent rating={rating}/>
         </div>
     );
 };
